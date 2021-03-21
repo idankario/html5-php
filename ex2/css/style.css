@@ -126,30 +126,25 @@ article a
 	line-height: 35px;
 	margin-top: -25px;
 }
-.card 
-{
+.card {
 	background:	#F5F4F4;
 }
-.card li
-{
+.card li{
 	background:	#FFFFFF;
 	text-align: center;
 	margin:56px 30px 271px 0px;
 	width:255px;
-height: 226px;
-display: inline-block;
+	height: 226px;
+	display: inline-block;
 }
-.card img
-{
+.card img{
 	margin-top:50px;
 }
-.card h2
-{
+.card h2{
 	margin-top:20px;
 	margin-bottom:10px;
 }
-.card p
-{
+.card p{
 	font-size: 12px;
 	width:192px;
 	margin-left: 34px;
@@ -164,16 +159,14 @@ footer{
 }
 
 .FooterIcons{
-	padding-top:18px;
-	padding-left:22px;
+	padding-top:33px;
+
 }
 .FooterIcons p{
-	opacity: 0.4;
 	display:inline-block;
-	padding-right:10px;
+	color: #FFFFFF;
+	margin-left:80px;
 }
-.FooterIcons img
-{
-	opacity: 0.4;
-	padding-right:10px;
+.FooterIcons img{
+	margin-right:28px;
 }
