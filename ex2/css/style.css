@@ -137,7 +137,21 @@ ul li h3
 height: 226px;
 display: inline-block;
 }
-
+.card img
+{
+	margin-top:50px;
+}
+.card h2
+{
+	margin-top:20px;
+	margin-bottom:10px;
+}
+.card p
+{
+	font-size: 12px;
+	width:192px;
+	margin-left: 34px;
+}
 /*-----------------------------*/
 /* Footer area				   */
 /*-----------------------------*/
