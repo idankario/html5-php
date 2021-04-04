@@ -1,0 +1,143 @@
+/*-----------------------------*/
+/*inits*/
+/*-----------------------------*/
+*{
+    margin: 0px;
+    padding: 0px;	
+}
+
+main,footer, nav, section,aside, div,#logo{
+    display : block;
+}
+
+a{
+	color:#ffffff;
+	text-decoration: none;
+}
+a:hover:not(#currentWeb) {
+	background-color: #111;
+	color:#0074D9;
+  }
+body{
+	font-family:Arial;
+	height: 100%;
+}
+
+
+header,footer{
+	background-color: #d6d6d6;	
+}
+
+/*-----------------------------*/
+/* Header area */
+/*-----------------------------*/
+header{
+	background-color: #d6d6d6;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height: 187px;
+}
+
+#logo{
+	background:url(../images/logo.png) no-repeat center;
+	height: 50px;
+	width: 50px;
+	/*text-align: center;*/
+	margin:auto;
+	
+}
+#wrapper {
+
+	background-color:#9c29b7;
+	
+	
+}
+
+main{
+	background-color:#eeeeee;
+	margin: 0 auto;
+    width: 79%;
+	
+	
+}
+.flex-container {
+	display: inline-block;
+	padding: 14px 0px;
+	height: 680px;
+	width: 80%;
+	background-color: #ffffff;	
+}
+aside div{
+	margin-top: 200px;
+    background-color: #B94A48;
+    height: 59px;
+    width: 148px;
+   
+}
+main aside
+{
+	float: right;
+	padding-right: 13px;
+	
+}
+
+.flex-container section:first-child div{
+	margin-bottom: 25px;
+}
+.flex-container section:nth-child(2){
+	float: right;
+	margin-top: 180px;
+}
+.flex-container section:nth-child(2) div{
+	margin-top: 25px;
+}
+
+.flex-container section{
+	display: flex;
+    flex-wrap: wrap;
+	width: 300px;
+}
+.flex-container section div {
+	margin: 0px 25px ;
+    height: 90px;
+    width: 90px;
+    background-color: #B94A48;
+ }
+/*-----------------------------*/
+/* navigMenu */
+/*-----------------------------*/
+nav{
+	height: 65px;
+	background-color: #333;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width:100%;
+}
+nav a{
+	line-height: 40px;
+	text-align: center;
+	width: 235px;
+}
+
+/*-----------------------------*/
+/* bold current web */
+/*-----------------------------*/
+#currentWeb{
+	background-color: #4CAF50;
+
+}
+
+@media (max-width:800px)  {
+
+}
+
+/*-----------------------------*/
+/* Footer area */
+/*-----------------------------*/
+
+footer{
+	height: 52px;
+	width: 100%;
+}
