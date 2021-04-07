@@ -4,25 +4,16 @@
 *{
     margin: 0px;
     padding: 0px;	
+	font-family:Arial;
 }
 
-main,footer, nav, section,aside, div,#logo{
+main,footer, section,aside, div,#logo{
     display : block;
 }
-
 a{
 	color:#ffffff;
 	text-decoration: none;
 }
-a:hover:not(#currentWeb) {
-	background-color: #111;
-	color:#0074D9;
-  }
-body{
-	font-family:Arial;
-	height: 100%;
-}
-
 
 header,footer{
 	background-color: #d6d6d6;	
@@ -32,7 +23,6 @@ header,footer{
 /* Header area */
 /*-----------------------------*/
 header{
-	background-color: #d6d6d6;
 	display:flex;
 	justify-content:center;
 	align-items:center;
@@ -43,94 +33,148 @@ header{
 	background:url(../images/logo.png) no-repeat center;
 	height: 50px;
 	width: 50px;
-	/*text-align: center;*/
-	margin:auto;
-	
+	margin:auto;	
 }
+
 #wrapper {
-
 	background-color:#9c29b7;
-	
-	
 }
 
-main{
-	background-color:#eeeeee;
-	margin: 0 auto;
-    width: 79%;
-	
-	
-}
-.flex-container {
-	display: inline-block;
-	padding: 14px 0px;
-	height: 680px;
-	width: 80%;
-	background-color: #ffffff;	
-}
-aside div{
-	margin-top: 200px;
-    background-color: #B94A48;
-    height: 59px;
-    width: 148px;
-   
-}
-main aside
-{
-	float: right;
-	padding-right: 13px;
-	
+a:hover:not(#currentWeb) {
+	background-color: #111;
 }
 
-.flex-container section:first-child div{
-	margin-bottom: 25px;
-}
-.flex-container section:nth-child(2){
-	float: right;
-	margin-top: 180px;
-}
-.flex-container section:nth-child(2) div{
-	margin-top: 25px;
-}
-
-.flex-container section{
-	display: flex;
-    flex-wrap: wrap;
-	width: 300px;
-}
-.flex-container section div {
-	margin: 0px 25px ;
-    height: 90px;
-    width: 90px;
-    background-color: #B94A48;
- }
 /*-----------------------------*/
 /* navigMenu */
 /*-----------------------------*/
-nav{
+nav:not(#wrapper nav){
 	height: 65px;
-	background-color: #333;
-	display: flex;
 	justify-content:center;
 	align-items:center;
 	width:100%;
 }
-nav a{
+nav{
+	background-color: #333;
+	display: flex;
+}
+#wrapper nav a{
+	padding-left: 6px;
+	line-height: 54px;
+}
+#wrapper nav {
+    flex-direction: column;
+	height: 740px;
+	width: 136px;
+}
+nav a:not(#wrapper a){
 	line-height: 40px;
-	text-align: center;
 	width: 235px;
+	text-align: center;
+}
+main{
+	display: flex;
+	flex-direction: row;
+	background-color:#eeeeee;
+	margin: 0 auto;
+    width: 71%;
 }
 
+main aside div{
+	margin-top: 200px;
+    background-color: #B94A48;
+    height: 59px;
+    width: 148px;
+	margin-left: 73px;
+}
+.flex-container {
+	width: 76%;
+	background-color: #ffffff;	
+}
+.page1{
+	height: 680px;
+}
+
+.page1 section:nth-child(2){
+	margin-top: 210px;
+}
+
+.page1 section:nth-child(2){
+	float: right;
+}
+.page2
+{
+    display: flex;
+    align-items: flex-end;
+	height: 740px;
+	width: 300px;
+	padding-bottom:52px ;
+	background-image: linear-gradient( #7FDBFF,#001f3f ); 
+
+}
+.page2 section{
+
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+
+	width: 280px;
+}
+.flex-container section{
+	display: flex;
+    flex-wrap: wrap;
+	width: 280px;
+}
+
+.flex-container section div,.page2 div {
+	margin:14px 25px;
+    height: 90px;
+    width: 90px;
+    background-color: #B94A48;
+ }
+
+
+
+
+
+.column>*{
+	background-image: linear-gradient( #7FDBFF,#001f3f ); 
+	width: 270px;
+	margin:20px;
+}
+
+.page2 + section{
+	display: flex;
+    flex-wrap: wrap;
+}
+
+.column{
+	flex-direction: column;
+}
+.column:first-child div:nth-child(1){
+
+    height: 320px;
+}
+
+.column:first-child div:nth-child(2){
+
+    height: 250px;
+}
+
+.column:last-child div:nth-child(1){
+    
+    height: 380px;
+}
+.column:last-child div:nth-child(2){
+    
+    height: 356px;
+	margin-bottom:0px;
+}
 /*-----------------------------*/
 /* bold current web */
 /*-----------------------------*/
 #currentWeb{
 	background-color: #4CAF50;
-
-}
-
-@media (max-width:800px)  {
-
 }
 
 /*-----------------------------*/
@@ -140,4 +184,10 @@ nav a{
 footer{
 	height: 52px;
 	width: 100%;
+	
+}
+.fixed{
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
