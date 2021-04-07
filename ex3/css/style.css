@@ -7,7 +7,7 @@
 	font-family:Arial;
 }
 
-main,footer, section,aside, div,#logo{
+footer, #logo{
     display : block;
 }
 a{
@@ -18,14 +18,17 @@ a{
 header,footer{
 	background-color: #d6d6d6;	
 }
-
+header,nav,main,.page2{
+	display:flex;
+}
+nav:not(main nav),header{
+	justify-content:center;
+	align-items:center;
+}
 /*-----------------------------*/
 /* Header area */
 /*-----------------------------*/
 header{
-	display:flex;
-	justify-content:center;
-	align-items:center;
 	height: 187px;
 }
 
@@ -36,7 +39,7 @@ header{
 	margin:auto;	
 }
 
-#wrapper {
+body {
 	background-color:#9c29b7;
 }
 
@@ -47,32 +50,27 @@ a:hover:not(#currentWeb) {
 /*-----------------------------*/
 /* navigMenu */
 /*-----------------------------*/
-nav:not(#wrapper nav){
+nav:not(main nav){
 	height: 65px;
-	justify-content:center;
-	align-items:center;
-	width:100%;
 }
 nav{
 	background-color: #333;
-	display: flex;
 }
-#wrapper nav a{
+main nav a{
 	padding-left: 6px;
 	line-height: 54px;
 }
-#wrapper nav {
+main nav {
     flex-direction: column;
-	height: 740px;
-	width: 136px;
+	height: 800px;
+	width: 14%;
 }
-nav a:not(#wrapper a){
+nav a:not(main a){
 	line-height: 40px;
 	width: 235px;
 	text-align: center;
 }
 main{
-	display: flex;
 	flex-direction: row;
 	background-color:#eeeeee;
 	margin: 0 auto;
@@ -96,33 +94,22 @@ main aside div{
 
 .page1 section:nth-child(2){
 	margin-top: 210px;
-}
-
-.page1 section:nth-child(2){
 	float: right;
 }
-.page2
-{
-    display: flex;
+
+.page2{
     align-items: flex-end;
-	height: 740px;
-	width: 300px;
+	height: 770px;
+	width: 26%;
 	padding-bottom:52px ;
 	background-image: linear-gradient( #7FDBFF,#001f3f ); 
-
 }
-.page2 section{
-
+.page2 section,.page2 + section,.flex-container section{
 	display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-
-
-	width: 280px;
 }
+
 .flex-container section{
-	display: flex;
-    flex-wrap: wrap;
 	width: 280px;
 }
 
@@ -133,19 +120,10 @@ main aside div{
     background-color: #B94A48;
  }
 
-
-
-
-
 .column>*{
 	background-image: linear-gradient( #7FDBFF,#001f3f ); 
 	width: 270px;
 	margin:20px;
-}
-
-.page2 + section{
-	display: flex;
-    flex-wrap: wrap;
 }
 
 .column{
@@ -158,17 +136,18 @@ main aside div{
 
 .column:first-child div:nth-child(2){
 
-    height: 250px;
+    height: 412px;
+	margin-bottom:0px;
 }
 
 .column:last-child div:nth-child(1){
     
-    height: 380px;
+    height: 260px;
 }
 .column:last-child div:nth-child(2){
     
-    height: 356px;
-	margin-bottom:0px;
+    height: 368px;
+	
 }
 /*-----------------------------*/
 /* bold current web */
