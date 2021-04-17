@@ -1,55 +1,51 @@
+const colors=["#363b3f", "#E14D43", "#26292c","#a3ca61","#ff6f6f","#fbcf61","#d97761","#0d4261","#00cc99","#006598",
+"#82b440","#428bca","#E77755","#523e7c","#f77e05","#24a828","#f2b91f","#94b998","#3CBD99","#019ad2","#e0e0e0","#ec3939"]
+let numE=0;
 
-var nameLenght = "idan".length
-var lastNameLenght = "kario".length
-var show //array of box elements
-
-var firstOneShow
-var indecator=1;
-var divContainer ;
-
-function boldName(){
-	if(indecator>0){	
-        divContainer[0].style.backgroundColor ="#8A2BE2";
-		divContainer[2].style.backgroundColor ="#8A2BE2";
-		divContainer[3].style.backgroundColor ="#8A2BE2";
-		divContainer[4].style.backgroundColor ="#8A2BE2";
-		indecator--;
-	}  
-   
+function createBox(wrapper){
+	let s= $(document.createElement("section")).css("background-color", colors[numE]);
+	$(wrapper).append(s);
+	if(!(++numE%3)){
+		let image= $(document.createElement("image")).css("background-color",  colors[numE]);
+		$(s).append('<img src="../images/star.png" alt="star" title="star">');
+	}
+	
 }
- 
-function unBoldName(){
-	if(indecator<1){
-		divContainer[0].style.backgroundColor ="#7FDBFF";
-		divContainer[2].style.backgroundColor ="#7FDBFF";
-		divContainer[3].style.backgroundColor ="#7FDBFF";
-		divContainer[4].style.backgroundColor ="#7FDBFF";
-		indecator++;
+function crateRecList(wrapper,r){
+	createBox(wrapper);
+	while(numE<r){
+		createBox(wrapper)
 	}
 }
+function addAtrBox(){
+	let s=$(".wrapper section").first();
 
-
-
-window.onload = function(){
-
-    divContainer =document.getElementsByTagName("main")[0];
-	var p= document.createElement("p")
-	p.innerHTML ="idan"[0]
-	p.style.display = "none"
-	var newDiv=this.document.createElement("div")
-	newDiv.appendChild(p)
-	newDiv.className="firstChar"
-	divContainer.appendChild(newDiv)
-    var firstE=newDiv;
-    for(var i=1;i<nameLenght*lastNameLenght;i++)
-	{
-		newDiv=document.createElement("div")
-		divContainer.appendChild(newDiv)
-    }
-    firstE.addEventListener("mouseover",function(){firstE.style.backgroundColor="#9932CC"
-	firstE.firstElementChild.style.display = "block"; });
-    firstE.addEventListener("mouseout", function(){firstE.style.backgroundColor="#7FDBFF"
-	firstE.firstElementChild.style.display = "none"; });
-    divContainer =document.getElementsByTagName("main")[0].getElementsByTagName('*');
-
+		s.html('<span class="fas fa-plus-circle"></span>');
 }
+function getRandomNum (s){return (Math.floor(Math.random()*s)+1); }
+function addRandomRec(n){
+    let r=getRandomNum((n.length)*2);
+	crateRecList($(".wrapper"),r);
+	addAtrBox();
+}
+$(function() {
+	addRandomRec("kario")
+});
+
+$(document).on("click", ".wrapper section:not(:first-child)", function(){
+	let q=this.style.backgroundColor == 'rgb(255, 255, 255)';
+	this.style.backgroundColor =  q ? colors[$(this).index()] : 'rgb(255, 255, 255)';
+	if(!q)
+		$(this).addClass('img1').fadeTo(1000, 1)
+	else
+		$(this).removeClass('img1').fadeTo(1000, 1)
+
+});
+$(document).on("click", ".wrapper span", function(){
+	createBox(".wrapper");	
+	alert("Secess to add new box");
+
+});
+
+
+
