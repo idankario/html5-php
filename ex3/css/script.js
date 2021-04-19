@@ -6,7 +6,7 @@ let numE=0
 const s=colors.length-1
 
 // get Random Num
-function getRandomNum (){return Math.floor(Math.random() * (s))  }
+let getRandomNum= () => Math.floor(Math.random() * (s)) ;
 function createBox(wrapper){
 	let s= $(document.createElement("section")).css("background-color", colors[numE]);
 	$(wrapper).append(s);
