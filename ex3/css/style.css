@@ -17,11 +17,9 @@ a{
 	color:#ffffff;
 	text-decoration: none;
 }
-
 header,footer{
 	background-color: #d6d6d6;	
 }
-
 header + nav,header{
 	justify-content:center;
 	align-items:center;
@@ -32,15 +30,11 @@ header + nav,header{
 header{
 	height: 187px;
 }
-
 #logo{
 	background:url(../images/logo.png) no-repeat center;
 	height: 50px;
 	width: 50px;
 }
-
-
-
 /*-----------------------------*/
 /* navigMenu */
 /*-----------------------------*/
@@ -50,7 +44,6 @@ header + nav{
 nav{
 	background-color: #333;
 }
-
 main a{
 	padding-left: 6px;
 	line-height: 54px;
@@ -65,9 +58,6 @@ header + nav a{
 	width: 17%;
 	text-align: center;
 }
-
-
-
 /*-----------------------------*/
 /* container1 */
 /*-----------------------------*/
@@ -91,7 +81,7 @@ header + nav a{
 .container1 div,.container1 + aside div{
 	background-color: #B94A48;
 }
-section section div{
+section section div:not(.c){
     height: 90px;
     width: 90px;
 	margin: 15px;
@@ -128,26 +118,24 @@ section section{
 /*-----------------------------*/
 /* column */
 /*-----------------------------*/
-.column div{
+.c div div{
 	background-image: linear-gradient( #7FDBFF,#001f3f ); 
 }
-.column{
-	flex-direction: column;
+.c >*{
 	width: 46%;
 }
-.column:first-child div:nth-child(1){
+.c div:first-child div:nth-child(1){
     height: 320px;
 }
 
-.column:first-child div:nth-child(2){
+.c div:first-child div:nth-child(2){
     height: 412px;
-	margin-bottom:0px;
 }
 
-.column:last-child div:nth-child(1){    
+.c div:last-child div:nth-child(1){    
     height: 260px;
 }
-.column:last-child div:nth-child(2){  
+.c div:last-child div:nth-child(2){  
     height: 368px;
 }
 .wrapper section {
@@ -167,27 +155,32 @@ section section{
 #currentWeb{
 	background-color: #4CAF50;
 }
-.img1{
+.imgBgr{
 	background-image: url('../images/dog.jpg');
 	background-repeat: no-repeat;
 	background-position: center; 
+}
+.wrapper span{
+	background-image: url('../images/plus.png');
+	background-repeat: no-repeat;
+	border-radius: 50%;
+    width: 250px;
+    height: 228px;
+    display: block;
+	margin: auto;
 }
 /*-----------------------------*/
 /* wrapper area */
 /*-----------------------------*/
 .wrapper section:first-child {
-	text-align: center;
-	justify-content: center;
-	text-align:center;
+
+	display: flex;
 
 }
-.wrapper  span{
-	margin-top: 75px;
-	font-size: 150px;
-	color: aqua;
-}
+
 .wrapper span:hover{
 	cursor: pointer;
+	background-color: #ffffff;
 }
 
 .wrapper section:not(:first-child){
@@ -206,6 +199,9 @@ footer{
     left: 0;
     bottom: 0;
 }
+/*-----------------------------*/
+/* Desktop area */
+/*-----------------------------*/
 @media (min-width:651px)  {
 	main{
 		margin: auto;
@@ -217,24 +213,50 @@ footer{
 	.wrapper span:hover{
 		color: #ffffff;
 	}
-	.column div{
-		margin:22px;
+	.c {
+	
+		margin-top: 22px;
 	}
-	.column{
-		margin-right:22px;
+	.c div div{
+		margin-bottom: 22px;
+		margin-left:22px;
+	}
+	header + nav a{
+		line-height: 36px;
+		width: 17%;
+		text-align: center;
 	}
 }
+/*-----------------------------*/
+/* tablet/mobile area */
+/*-----------------------------*/
 @media (max-width:650px)  {
 	aside div{
-
 		height: 20px;
 		width: 40%;
 		margin-left: 13%;
+	}
+	header + nav a{
+		line-height: 36px;
+		margin:10px;
+		text-align: center;
 	}
 	.container1 section:nth-child(2){
 		margin-left: 10%;
 		align-self: flex-end;
 	}
+	.c {
+	
+		margin-top: 10px;
+	}
+	.c div div{
+		margin-bottom: 10px;
+		margin-left:10px;
+	}
+	nav a{
+		font-size: 13px;
+	}
+
 }
 
 @media (max-width: 767px) {
@@ -244,3 +266,9 @@ footer{
 		width: 100px;
 	}
   }
+@media (max-width: 480px) {
+	.c >*{
+		width: 20%;
+	}
+}
+	
