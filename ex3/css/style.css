@@ -41,10 +41,6 @@ header{
 
 
 
-a:hover:not(#currentWeb) {
-	background-color: #111;
-}
-
 /*-----------------------------*/
 /* navigMenu */
 /*-----------------------------*/
@@ -114,30 +110,30 @@ aside div{
     width: 60%;
 	margin-left: 33%;
 }
-.page2{
+.container2{
 	width: 23%;	
 	align-items: flex-end;
 	padding-bottom:52px ;
 	background-color: #6e97d5;
 }
-.page2 div{
+.container2 div{
 	background-image: linear-gradient( #7FDBFF,#001f3f );
 }
 section section{
     flex-wrap: wrap;
 }
-.page2 + section{
+.container2 + section{
 	width: 62%;
 }
+/*-----------------------------*/
+/* column */
+/*-----------------------------*/
 .column div{
 	background-image: linear-gradient( #7FDBFF,#001f3f ); 
-	margin:22px;
 }
-
 .column{
 	flex-direction: column;
 	width: 46%;
-	margin-right:22px;
 }
 .column:first-child div:nth-child(1){
     height: 320px;
@@ -165,7 +161,6 @@ section section{
 	height: 330px;
 	width: 359px;
 }
-
 /*-----------------------------*/
 /* bold current web */
 /*-----------------------------*/
@@ -177,6 +172,9 @@ section section{
 	background-repeat: no-repeat;
 	background-position: center; 
 }
+/*-----------------------------*/
+/* wrapper area */
+/*-----------------------------*/
 .wrapper section:first-child {
 	text-align: center;
 	justify-content: center;
@@ -189,7 +187,6 @@ section section{
 	color: aqua;
 }
 .wrapper span:hover{
-	color: #ffffff;
 	cursor: pointer;
 }
 
@@ -213,6 +210,18 @@ footer{
 	main{
 		margin: auto;
 		width: 71%;
+	}
+	a:hover:not(#currentWeb) {
+		background-color: #111;
+	}
+	.wrapper span:hover{
+		color: #ffffff;
+	}
+	.column div{
+		margin:22px;
+	}
+	.column{
+		margin-right:22px;
 	}
 }
 @media (max-width:650px)  {
