@@ -173,20 +173,8 @@ section section{
 /* wrapper area */
 /*-----------------------------*/
 .wrapper section:first-child {
-
 	display: flex;
-
 }
-
-.wrapper span:hover{
-	cursor: pointer;
-	background-color: #ffffff;
-}
-
-.wrapper section:not(:first-child){
-	cursor: pointer;
-}
-
 /*-----------------------------*/
 /* Footer area */
 /*-----------------------------*/
@@ -202,19 +190,13 @@ footer{
 /*-----------------------------*/
 /* Desktop area */
 /*-----------------------------*/
+
 @media (min-width:651px)  {
 	main{
 		margin: auto;
 		width: 71%;
 	}
-	a:hover:not(#currentWeb) {
-		background-color: #111;
-	}
-	.wrapper span:hover{
-		color: #ffffff;
-	}
 	.c {
-	
 		margin-top: 22px;
 	}
 	.c div div{
@@ -246,7 +228,6 @@ footer{
 		align-self: flex-end;
 	}
 	.c {
-	
 		margin-top: 10px;
 	}
 	.c div div{
@@ -258,17 +239,26 @@ footer{
 	}
 
 }
-
-@media (max-width: 767px) {
-	.navbar-collapse a{
-		display: flex;
-		background-color: #333;
-		width: 100px;
+/*-----------------------------*/
+/* tablet&desktop area */
+/*-----------------------------*/
+@media (min-width:481px)  {
+	a:hover:not(#currentWeb) {
+		background-color: #111;
 	}
-  }
+	.wrapper section:not(:first-child){
+		cursor: pointer;
+	}
+	.wrapper span:hover{
+		cursor: pointer;
+		background-color: #ffffff;
+	}
+}
+/*-----------------------------*/
+/* mobile area */
+/*-----------------------------*/
 @media (max-width: 480px) {
 	.c >*{
 		width: 20%;
 	}
 }
-	
