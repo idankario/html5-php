@@ -1,0 +1,147 @@
+/*-----------------------------*/
+/*inits*/
+/*-----------------------------*/
+*{
+  margin: 0px;
+  padding: 0px;	
+font-family:Arial;
+}
+
+section{
+  display: block;
+}
+
+body {
+  background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+  font-size: 16px;
+  font-weight: bold;
+  align-items: center;
+}
+/*-----------------------------*/
+/*container*/
+/*-----------------------------*/
+.container {
+  padding: 0px;
+}
+
+.container form{
+  background:#87ceeb ;
+  padding:30px;
+  opacity: 0.8;
+}
+
+.container section {
+  background: #807182;
+
+}
+.container section img {
+  filter: sepia(100%);
+  opacity: 0.3;
+}
+.clock{
+  position: absolute;
+  width:25%;
+  align-self: center;
+}
+/*-----------------------------*/
+/*Label Input*/
+/*-----------------------------*/
+
+form div label {
+  margin-top: 20px ;
+}
+
+ input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding-left: 5px;
+  width: 30%;
+}
+
+input[type=radio]:checked +label,input[type=radio]:checked{
+  background: #F7B1AB;
+}
+/*-----------------------------*/
+/*footer*/
+/*-----------------------------*/
+footer {
+  background-color: hsla(0, 100%, 90%, 0.3);
+  align-items: center;
+  margin-top: 40px;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+ }
+footer span {
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%; 
+}
+.checked{
+  background-color: #F7B1AB;
+}
+
+button{
+	outline: none;
+	background-color: #4471a9;
+	padding: 5px 15px;
+	border: 0;
+	border-radius: 5px;
+	background-image: -webkit-linear-gradient(top, #5884BC, #395e8d);
+	box-shadow:0px 5px 0px #223955, 0px 8px 5px rgba(0,0,0,0.3);
+}
+
+/*-----------------------------*/
+/* Desktop area */
+/*-----------------------------*/
+@media (min-width:1000px)  {
+  .container section{
+    width: 30%;
+  }
+  .container form{
+    width: 35%;
+  }
+}
+
+@media (min-width:800px)  {
+  .container form{
+    border-radius: 0% 10% 10% 0%;
+  }
+  .container section {
+    border-radius: 10% 0% 0% 10%;
+  }  
+
+  .container {
+    margin-top: 50px;
+    display: flex;
+    justify-content:center ;
+  }
+}
+/*-----------------------------*/
+/* tablet&desktop area */
+/*-----------------------------*/
+@media  screen and  (min-width:650px)  {
+  button:hover:not([disabled]){
+    color:#0074D9;
+    background-color:#395e8d;
+    box-shadow:0px 2px 0px #223955, 0px 4px 3px rgba(0,0,0,0.3);
+  }
+}
+
+/*-----------------------------*/
+/* mobile area and tablet area */
+/*-----------------------------*/
+@media  screen and  (max-width: 800px) {
+  .container section img{
+    height: 200px;
+    width: 50%;
+  }  
+  .clock{
+    width:50%;
+    margin:auto;
+    top: 30%;
+    left:30%
+  }
+}
+
