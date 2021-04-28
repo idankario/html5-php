@@ -24,13 +24,13 @@ body {
   padding: 0px;
 }
 
-.container form{
+.container form,.c{
   background:#87ceeb ;
   padding:30px;
   opacity: 0.8;
 }
 
-.container section {
+.container >section:not(.c) {
   background: #807182;
 
 }
@@ -96,19 +96,19 @@ button{
 /* Desktop area */
 /*-----------------------------*/
 @media (min-width:1000px)  {
-  .container section{
+  .container section:not(.c){
     width: 30%;
   }
-  .container form{
+  .container form,.c{
     width: 35%;
   }
 }
 
 @media (min-width:800px)  {
-  .container form{
+  .container form,.c{
     border-radius: 0% 10% 10% 0%;
   }
-  .container section {
+  .container section:not(.c) {
     border-radius: 10% 0% 0% 10%;
   }  
 
