@@ -1,5 +1,3 @@
-
-
 function movesvg() {
   const tl = new TimelineMax();
   const bgd = $('#background rect');
@@ -69,11 +67,6 @@ $(()=> {
   fadeE();
   formValidations();
 });
-
-
-
-
-
 
 const constructValidation=(e,test)=>{
   if (test) {
