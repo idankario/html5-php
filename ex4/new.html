@@ -15,7 +15,7 @@
 <body>
   <main class='container'>
     <section>
-        <img src='images/love.svg'>
+        <img src='images/love.svg'alt="love" title="love">
     </section>
     <form action="http://se.shenkar.ac.il/students/2020-2021/web1/dev_83/exercises/ex4/getItem.php" method="GET">
       <header>
@@ -23,11 +23,11 @@
       </header>
       <div class="col-sm-9">
         <label for="fullName" class="col-sm-4 form-label">Name</label>
-        <input type="text" name="fullName" id="fullName"class="form-control" placeholder="" value="" required="">
+        <input type="text" name="fullName" id="fullName"class="form-control" pattern="^[a-zA-Z]{1,15}$"placeholder="" value="" required="">
       </div>
       <div class="col-sm-9">
         <label for="fullName" class="col-sm-7 form-label">Product name</label>
-        <input type="text" name="productName" id="fullName"class="form-control" placeholder="" value="" required="">
+        <input type="text" name="productName" id="fullName"class="form-control" pattern="^[a-zA-Z]{1,15}$" placeholder="" value="" required="">
       </div>
       <div class="col-sm-9">
         <label for="Password"  class="col-sm-4 form-label">Price</label>

@@ -15,7 +15,7 @@
 <body>
 	<main class='container'>
     <section>
-      <img src='images/love.svg'>
+      <img src='images/love.svg' alt="love" title="love">
     </section>
 		<section class="c">
       <header class="text-light">
