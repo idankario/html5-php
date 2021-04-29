@@ -1,3 +1,4 @@
+// Create animation to svg
 function movesvg() {
   const tl = new TimelineMax();
   const bgd = $('#background rect');
@@ -40,7 +41,7 @@ function movesvg() {
     .to(lampLine, 0.1, {opacity: 1}, "b-=0.05")
     .to(lampLine, 0.1, {opacity: 0.5}, "c-=0.05");
 }
-
+// Take out the first svg
 const fadeE=()=>{
     // setTimeout() function will be fired after page is loaded
     // it will wait for 5 sec. and then will fire
@@ -59,7 +60,7 @@ const toggleClock=()=> {
       }, 3000);
   }, 2000);
 }
-
+// Send svg clock image to screen
 $(()=> {
   movesvg();
   $(".clock").fadeOut();
@@ -67,7 +68,7 @@ $(()=> {
   fadeE();
   formValidations();
 });
-
+// Submission notification to user
 const constructValidation=(e,test)=>{
   if (test) {
     if (!e.target.classList.contains('is-valid'))
@@ -85,7 +86,7 @@ const constructValidation=(e,test)=>{
     );
   }
 }
-
+// Submission notification to user and check valid input
 const formValidations = () => {
   window.addEventListener(
     'load',
