@@ -1,16 +1,5 @@
 
-window.onload=()=>{
-	if($(".slider-container-header").length)
-	{
-		sliderFunction()
-	}
-	if($("#products").length){
-		createProductAndFilter()
-		createFilter()
-	}
 
-
-}
 const sliderFunction=()=> {
 
 	let curSlide     = 0,
@@ -207,6 +196,7 @@ const createProductAndFilter=()=> {
 	$(".filter-type").append(types);
 	//on search form submitt
 	$("#search-form").submit((e)=>{
+
 		e.preventDefault();
 		let query = $("#search-form input").val().toLowerCase();
 		$(".product").hide();
@@ -254,6 +244,14 @@ const createFilter=()=> {
 	});
 }
 
-
-
+window.onload=()=>{
+	if($(".slider-container-header").length)
+	{
+		sliderFunction()
+	}
+	if($("#products").length){
+		createProductAndFilter()
+		createFilter()
+	}
+}
 
