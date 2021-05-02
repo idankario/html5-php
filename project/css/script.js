@@ -165,7 +165,7 @@ const createProductAndFilter=()=> {
 			image = data[i].image;
 	
 		//create product cards
-		products += "<a class='product' data-gender='" + gender +  "' data-name='" + name + "' data-age='" + age + "' data-size='" + size +"' data-type='" + type + "'href='updateDog.html?DogId='"+(i+1)+'">'+
+		products += "<a class='product' data-gender='" + gender +  "' data-name='" + name + "' data-age='" + age + "' data-size='" + size +"' data-type='" + type + "'href='updateDog.html?DogId=1>'"+
 		'<img class="rounded-circle" alt='+name+ ' title='+name+' src='+image+' "data-holder-rendered="true">'+
 			'<h3>'+name+'</h3>'+	
 		'</a>'
@@ -195,7 +195,6 @@ const createProductAndFilter=()=> {
 	$(".filter-type").append(types);
 	//on search form submitt
 	$("#search-form").submit((e)=>{
-
 		e.preventDefault();
 		let query = $("#search-form input").val().toLowerCase();
 		$(".product").hide();
@@ -212,12 +211,12 @@ const createProductAndFilter=()=> {
 }
 
 const createFilter=()=> {
-	var filtersObject = {};
+	let filtersObject = {};
 
 	//on filter change
 	$(".filter").on("change",function() {
 		
-		var filterName = $(this).data("filter"),
+		let filterName = $(this).data("filter"),
 			filterVal = $(this).val();
 		
 		if (filterVal == "") {
@@ -226,9 +225,9 @@ const createFilter=()=> {
 			filtersObject[filterName] = filterVal;
 		}
 		
-		var filters = "";
+		let filters = "";
 		
-		for (var key in filtersObject) {
+		for (let key in filtersObject) {
 			if (filtersObject.hasOwnProperty(key)) {
 				filters += "[data-"+key+"='"+filtersObject[key]+"']";
 			}
