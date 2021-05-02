@@ -29,6 +29,7 @@ h2 {
 h3{
   text-align: center;
   font-size: 60px;
+  color:#000;
 }
 #currentWeb{
   text-decoration: underline;
@@ -78,9 +79,7 @@ nav{
   margin-top: 20px;  text-align: center;
 }
 
-nav a:hover{
-  background:  rgba(0, 0, 0, 0.1);
-}
+
 /*-----------------------------*/
 /* slider */
 /*-----------------------------*/
@@ -137,9 +136,7 @@ nav a:hover{
   height: 100%;
   cursor: pointer;
 }
-.slider-control:hover {
-  background-color: rgba(198, 198, 247,0.3);
-}
+
 .left{
   left:0;
 }
@@ -178,8 +175,7 @@ nav a:hover{
   transform: translate(-50%, -50%) scale(0);
 }
 
-.slider-pagi__elem.active:before,
-.slider-pagi__elem:hover:before {
+.slider-pagi__elem.active:before{
   transform: translate(-50%, -50%) scale(1);
 }
 
@@ -257,10 +253,6 @@ nav a:hover{
     margin: 5%;
     text-align: center;
     font-weight: bold;
-}
-
-.flex-wrap a:hover{
-    color:#C6C6F7 ;
 }
 .text-c{
     display: flex;
@@ -380,7 +372,7 @@ footer section:first-child a{
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 4px;
-  margin-right: 2%;
+  margin-right: 1%;
 }
 footer section:first-child a:first-child{
   background-color: #C6B393;
@@ -413,10 +405,10 @@ footer section:nth-child(2){
     background-image: url("../images/Facebook.png");
 }
 .medialinks a:nth-child(2){
-    background-image: url("../images/twitter.png");
+    background-image: url("../images/Twitter.png");
 }
 .medialinks a:last-child{
-    background-image: url("../images/google.png"); 
+    background-image: url("../images/Google.png"); 
 }
 
 
@@ -501,7 +493,6 @@ button{
   .c > section{
     border-radius: 10% 0% 0% 10%;
   }  
-
   .c {
     margin-top: 50px;
     display: flex;
@@ -518,12 +509,25 @@ button{
 /* tablet&desktop area */
 /*-----------------------------*/
 @media  screen and  (min-width:650px)  {
+  nav a:hover{
+    background:  rgba(0, 0, 0, 0.1);
+  }
+  .flex-wrap a:hover{
+    color:#C6C6F7 ;
+  }
+  .slider-control:hover {
+    background-color: rgba(198, 198, 247,0.3);
+  }
   button:hover:not([disabled]){
     background-color:#395e8d;
   }
-  
+  .slider-control:hover {
+    background-color: rgba(198, 198, 247,0.3);
+  }
+  .slider-pagi__elem:hover:before {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
-
 /*-----------------------------*/
 /* mobile area and tablet area */
 /*-----------------------------*/
@@ -537,9 +541,7 @@ button{
     font-size: 50px;
   }
   footer{
-    font-size: 10px;
+    font-size:8px;
   }
 
 }
-
-
